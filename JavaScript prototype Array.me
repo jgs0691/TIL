@@ -1,0 +1,79 @@
+오늘의 TIL
+
+JavaScript 표준내장객체 Array
+참고 : https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+자주 사용하는 애들 정리 ( * 자주사용하면서 익혀야함 중요! )
+Array Properties & Methods
+1. Array.length *
+2. Array.at()
+3. Array.concat() *
+4. Array.fill()
+5. Array.filter() *
+6. Array.find() *
+7. Array.map() *
+8. Array.pop()
+9. Array.push()
+10. Array.reverse() *
+11. Array.slice() *
+12. Array.sort() *
+13. Array.splice() *
+
+1. Array.length
+배열의 길이를 반환. 반환값은 부호 없는 32비트 정수이며 배열의 최대 인덱스보다 항상 크다. length 속성에 값을 설정할 경우 배열의 길이를 변경.
+
+2. Array.at()
+정수 값을 받아, 배열에서 해당 값에 해당하는 인덱스의 요소를 반환한다. 양수, 음수 모두 지정하며, 음수 값의 경우에는 뒤에서부터 인덱스를 센다.
+(뒤에서 n번째의 데이터를 찾기 용이)
+
+3. Array.concat()
+인자로 주어진 배열이나 값을 기존 배열에 합쳐서 새 배열을 반환한다.
+기존배열을 변경하지 않으며, 추가된 새로운 배열을 반환한다.
+- array1.concat(array2);
+
+4. Array.fill()
+배열의 시작 인덱스부터 끝 인덱스의 이전까지 정적인 값 하나로 채운다.
+array1.fill(value, start, end);
+value = 채울 값
+start = 시작 인덱스
+end = 끝 인덱스
+
+5. Array.filter()
+주어진 함수의 테스트를 통과하는 모든 요소를 모아 새로운 배열로 반환한다.
+var result = array1.filter(element => element > 10); //배열 값 중 10보다 큰 정수를 새 배열에 담는다.
+배열의 10보다 큰 정수의 개수 는 result.length
+
+6. Array.find()
+주어진 판별 함수를 만족하는 첫 번째 요소이 값을 반환한다. 요소가 없으면 undefined를 반환한다.
+array1.find(element => element > 10);
+배열의 10보다 큰 첫 번째 값
+
+7. Array.map()
+배열 내의 모든 요소 각각에 대하여 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환한다.
+array1.mpa(e => e * 2) // 모든 배열에 *2 를 해준다.
+
+8. Array.pop()
+배열의 마지막 요소 제거한다.
+
+9. Array.push()
+인자 값을 배열의 마지막에 추가한다.
+
+10. Array.reverse()
+배열의 순서를 반전한다.
+
+11. Array.slice()
+배열의 begin 부터 end 까지(end 미포함)에 대한 얕은 복사본을 새로운 배열 객체로 반환한다.
+Array1.slice(2); // Array1[2] 번째부터 마지막까지 새로운 배열을 반환한다.
+Array1.slice(2, 4); //Array1[2~4] 번째 값을 새로운 배열로 반환한다.
+
+12. Array.sort()
+배열의 요소를 정렬한 후 반환한다. 기본 정렬 순서는 문자열의 유니코드를 따른다.
+오름차순 : Array1.sort((a,b) => a-b)
+내림차순 : Array1.sort((a,b) => b-a)
+
+13. Array.splice()
+배열의 기존 요소를 삭제하거나 교체, 혹은 추가하여 배열의 내용을 변강한다.
+
+length 나 push 등 기본적인 Array 기능들을 사용하곤 있었지만
+실무를 해 나가면서 map, filter 등을 알게되고 사용하면서 무언가 내가 더 잘하는 것 같은 느낌을 받는다... (사실 아님)
+이 내장 객체들의 사용법은 정말 무궁무진한 것 같고, 나도 더욱 더 능숙하게 다룰 수 있게되면 좋겠다.
